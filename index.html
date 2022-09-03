@@ -55,11 +55,10 @@
           </svg>
         </a>
       </div>
-      <img
-        class="header__image"
-        srcset="./src/assets/mobile/image-header.jpg 750w, ./src/assets/desktop/image-header.jpg 2880w"
-        src="./src/assets/desktop/image-header.jpg"
-        alt="" />
+      <picture>
+        <source media="(max-width: 649px)" srcset="./src/assets/mobile/image-header.jpg" />
+        <img class="header__image" srcset="./src/assets/desktop/image-header.jpg" alt="" />
+      </picture>
     </header>
     <script type="module" src="/src/main.ts"></script>
   </body>
