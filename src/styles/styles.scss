@@ -20,6 +20,7 @@ body {
 }
 
 .navbar {
+  $desktopScreen: $screen-md;
   position: absolute;
   top: 0;
   inset-inline: 1.5rem;
@@ -27,81 +28,83 @@ body {
   justify-content: space-between;
   align-items: center;
   padding-block: 2rem;
+
+  @media (min-width: $desktopScreen) {
+    inset-inline: 2.5rem;
+  }
+
   &__logo {
     color: $clr-white;
     height: 1.5rem;
-  }
-  @media (min-width: $screen-md) {
-    inset-inline: 2.5rem;
-    &__logo {
+
+    @media (min-width: $desktopScreen) {
       height: 2rem;
     }
   }
-}
 
-.navbar__nav {
-  &-hamburger {
-    cursor: pointer;
-    color: $clr-white;
-    width: 1.5rem;
-    @media (min-width: $screen-md) {
-      display: none;
-    }
-  }
+  &__nav {
+    &-hamburger {
+      cursor: pointer;
+      color: $clr-white;
+      padding: 0.5rem;
+      margin: -0.5rem;
+      svg {
+        width: 1.5rem;
+      }
 
-  &-list {
-    position: absolute;
-    top: calc(100% + 1rem);
-    inset-inline: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    padding: 2rem;
-    opacity: 0;
-    pointer-events: none;
-    background-color: $clr-white;
-    text-align: center;
-    transition: opacity 300ms ease-in-out;
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 100%;
-      right: 0;
-      display: block;
-      width: 0;
-      height: 0;
-      border-bottom: 1.5rem solid $clr-white;
-      border-left: 1.5rem solid transparent;
-    }
-    a {
-      color: $clr-neutral-200;
-      font-size: $fs-md;
-      text-decoration: none;
-    }
-    li:last-child {
-      a {
-        display: inline-block;
-        background-color: $clr-yellow;
-        color: $clr-neutral-400;
-        font-size: $fs-sm;
-      }
-    }
-    @media (min-width: $screen-md) {
-      position: relative;
-      flex-direction: row;
-      padding: 0;
-      background-color: transparent;
-      &.open {
-        opacity: 1;
-        pointer-events: all;
-      }
-      &::before {
+      @media (min-width: $desktopScreen) {
         display: none;
       }
-      li {
-        &:not(:last-child) {
-          a {
+    }
+
+    &-list {
+      position: absolute;
+      top: calc(100% + 1rem);
+      inset-inline: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      padding: 2rem;
+      background-color: $clr-white;
+      opacity: 0;
+      visibility: hidden;
+      transition: visibility 300ms, opacity 300ms ease-in-out;
+      &.open {
+        opacity: 1;
+        visibility: visible;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        right: 0;
+        display: block;
+        width: 0;
+        height: 0;
+        border-bottom: 1.5rem solid $clr-white;
+        border-left: 1.5rem solid transparent;
+      }
+
+      @media (min-width: $desktopScreen) {
+        position: relative;
+        flex-direction: row;
+        padding: 0;
+        background-color: transparent;
+        opacity: 1;
+        visibility: visible;
+        &::before {
+          display: none;
+        }
+      }
+
+      li:not(:last-child) {
+        a {
+          color: $clr-neutral-200;
+          font-size: $fs-md;
+          text-decoration: none;
+
+          @media (min-width: $desktopScreen) {
             position: relative;
             color: $clr-white;
             font-size: $fs-base;
@@ -123,8 +126,15 @@ body {
             }
           }
         }
-        &:last-child {
-          a {
+      }
+
+      li:last-child {
+        a {
+          background-color: $clr-yellow;
+          color: $clr-neutral-400;
+          font-size: $fs-sm;
+
+          @media (min-width: $desktopScreen) {
             background-color: $clr-white;
             transition: all 300ms ease-in-out;
             &:hover {
