@@ -1,0 +1,22 @@
+@use "variables" as *;
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.btn {
+  padding: 1.125rem 2rem;
+  border-radius: 2rem;
+  font-size: $fs-sm;
+  font-family: $ff-heading;
+  font-weight: $fw-heading-bold;
+  text-transform: uppercase;
+}

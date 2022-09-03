@@ -39,6 +39,7 @@ select {
   appearance: none;
   background-color: transparent;
   border: none;
+  padding: 0;
 }
 
 p,
@@ -51,9 +52,10 @@ h6 {
   overflow-wrap: break-word;
 }
 
-ul[role="list"],
-ol[role="list"] {
+ul,
+ol {
   list-style: none;
+  padding: 0;
 }
 
 a:not([class]) {

@@ -1,0 +1,49 @@
+/** Colors **/
+
+$clr-white: hsla(0, 0%, 98%, 1);
+$clr-red: hsla(7, 99%, 70%, 1);
+$clr-shadow-red: hsla(7, 99%, 70%, 0.5);
+$clr-yellow: hsla(51, 100%, 49%, 1);
+$clr-shadow-yellow: hsla(51, 100%, 49%, 0.5);
+$clr-blue: hsla(198, 62%, 26%, 1);
+$clr-green-100: hsla(167, 44%, 70%, 1);
+$clr-green-200: hsla(168, 34%, 41%, 1);
+$clr-green-300: hsla(167, 40%, 24%, 1);
+
+$clr-neutral-100: hsla(212, 4%, 67%, 1);
+$clr-neutral-200: hsla(232, 10%, 55%, 1);
+$clr-neutral-300: hsla(213, 9%, 39%, 1);
+$clr-neutral-400: hsla(212, 27%, 19%, 1);
+
+/** Typography **/
+
+$ff-body: "Barlow", sans-serif;
+$ff-heading: "Fraunces", serif;
+
+$fw-body: 600;
+$fw-heading-bold: 700;
+$fw-heading-black: 900;
+
+$lh-normal: 1.25;
+$lh-loose: 1.6;
+
+$ls-body: -0.02em;
+$ls-heading: 0.02em;
+$ls-black: 0.2em;
+
+$fs-xs: 0.875rem; // 14px
+$fs-sm: 1rem; // 16px
+$fs-base: 1.125rem; // 18px
+$fs-md: 1.25rem; // 20px
+$fs-lg: 1.75rem; // 28px
+$fs-xl: 2rem; // 32px
+$fs-2xl: 2.5rem; // 40px
+$fs-3xl: 3.375rem; // 54px
+
+/** Breakpoints **/
+
+$screen-xs: 480px;
+$screen-sm: 640px;
+$screen-md: 768px;
+$screen-lg: 1024px;
+$screen-xl: 1280px;
