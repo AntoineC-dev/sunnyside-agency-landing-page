@@ -1,22 +1,24 @@
 import "./styles/styles.scss";
-import { clickOutside } from "./utils";
+import { clickOutside, trapFocus } from "./utils";
 
 /**
  * Toggle mobile menu
  */
 
+const nav = document.getElementById("nav") as HTMLDivElement;
 const hamburger = document.getElementById("hamburger") as HTMLButtonElement;
-const nav = document.getElementById("main-navigation") as HTMLDivElement;
+const navItems = document.getElementById("nav-items") as HTMLDivElement;
 
-let open = false;
+let navOpen = false;
 
-const toggleMobileMenu = (e?: MouseEvent) => {
-  e?.stopPropagation();
-  open = !open;
-  hamburger.setAttribute("aria-expanded", `${open}`);
-  nav.classList.toggle("open");
-  open ? window.addEventListener("click", handleClickOutside) : window.removeEventListener("click", handleClickOutside);
+const toggleMobileMenu = () => {
+  navOpen = !navOpen;
+  hamburger.setAttribute("aria-expanded", `${navOpen}`);
+  navItems.classList.toggle("open");
+  handleClickOutside(navOpen);
+  handleTrapFocus(navOpen);
 };
 
 const handleClickOutside = clickOutside(nav, toggleMobileMenu);
+const handleTrapFocus = trapFocus(nav, hamburger, toggleMobileMenu);
 hamburger.addEventListener("click", toggleMobileMenu);
