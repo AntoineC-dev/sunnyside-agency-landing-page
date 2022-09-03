@@ -39,6 +39,7 @@ $fs-lg: 1.75rem; // 28px
 $fs-xl: 2rem; // 32px
 $fs-2xl: 2.5rem; // 40px
 $fs-3xl: 3.375rem; // 54px
+$fs-clamp-h1: clamp(2.5rem, calc(1.67rem + 3.56vw), 3.38rem); // [40px,375px] to [54px,768px]
 
 /** Breakpoints **/
 
