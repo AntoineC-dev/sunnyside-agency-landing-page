@@ -10,6 +10,10 @@ body {
   font-family: $ff-body;
 }
 
+/**
+* HEADER
+**/
+
 .header {
   position: relative;
   &__image {
@@ -197,6 +201,10 @@ body {
   }
 }
 
+/**
+* FEATURES
+**/
+
 .features {
   @media (min-width: $screen-md) {
     display: grid;
@@ -207,115 +215,116 @@ body {
       grid-row: 1;
     }
   }
+}
 
-  /** Picture **/
-  .picture {
-    display: flex;
-    height: 100%;
-    &__image {
-      width: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-  }
-
-  /** Feature **/
-  .feature {
-    padding: 4rem 1.5rem;
+.picture {
+  display: flex;
+  height: 100%;
+  &__image {
     width: 100%;
-    max-width: 30rem;
-    text-align: center;
-    margin-inline: auto;
-
-    @media (min-width: $screen-md) {
-      margin-inline: clamp(0rem, calc(-24rem + 37.5vw), 6rem);
-      text-align: left;
-    }
-
-    &__title {
-      font-size: $fs-clamp-h2;
-    }
-
-    &__content {
-      color: $clr-neutral-200;
-      margin-block: 1.5rem 2.25rem;
-    }
-
-    &__link {
-      position: relative;
-      display: inline-block;
-      font-family: $ff-heading;
-      font-size: $fs-sm;
-      letter-spacing: $ls-heading;
-      color: $clr-neutral-400;
-      text-decoration: none;
-      text-transform: uppercase;
-      &::after {
-        content: "";
-        display: block;
-        position: absolute;
-        z-index: -1;
-        inset-inline: -0.5rem;
-        bottom: -0.25em;
-        height: 0.75rem;
-        border-radius: 0.5rem;
-        opacity: 0.25;
-        transition: opacity 300ms ease-in;
-      }
-      &:hover::after {
-        opacity: 0.6;
-      }
-    }
+    object-fit: cover;
+    object-position: center;
   }
-  #transform a::after {
-    background-color: $clr-yellow;
-  }
-  #stand-out a::after {
-    background-color: $clr-red;
+}
+
+.feature {
+  padding: 4rem 1.5rem;
+  width: 100%;
+  max-width: 30rem;
+  text-align: center;
+  margin-inline: auto;
+
+  @media (min-width: $screen-md) {
+    margin-inline: clamp(0rem, calc(-24rem + 37.5vw), 6rem);
+    text-align: left;
   }
 
-  /** Features special **/
-  .feature-special {
+  &__title {
+    font-size: $fs-clamp-h2;
+  }
+
+  &__content {
+    color: $clr-neutral-200;
+    margin-block: 1.5rem 2.25rem;
+  }
+
+  &__link {
     position: relative;
-
-    &__picture,
-    img {
-      width: 100%;
-    }
-
-    &__inner {
+    display: inline-block;
+    font-family: $ff-heading;
+    font-size: $fs-sm;
+    letter-spacing: $ls-heading;
+    color: $clr-neutral-400;
+    text-decoration: none;
+    text-transform: uppercase;
+    &::after {
+      content: "";
+      display: block;
       position: absolute;
-      bottom: 3.5rem;
-      inset-inline: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      text-align: center;
+      z-index: -1;
+      inset-inline: -0.5rem;
+      bottom: -0.25em;
+      height: 0.75rem;
+      border-radius: 0.5rem;
+      opacity: 0.25;
+      transition: opacity 300ms ease-in;
     }
-
-    &__title {
-      font-size: $fs-lg;
-    }
-
-    &__content {
-      max-width: 35ch;
-      margin-inline: auto;
-    }
-  }
-  #graphic-design {
-    h2,
-    p {
-      color: $clr-green-300;
-    }
-  }
-
-  #photography {
-    h2,
-    p {
-      color: $clr-blue;
+    &:hover::after {
+      opacity: 1;
     }
   }
 }
+#transform a::after {
+  background-color: $clr-yellow;
+}
+#stand-out a::after {
+  background-color: $clr-red;
+}
+
+.feature-special {
+  position: relative;
+
+  &__picture,
+  img {
+    width: 100%;
+  }
+
+  &__inner {
+    position: absolute;
+    bottom: 3.5rem;
+    inset-inline: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: $fs-lg;
+  }
+
+  &__content {
+    max-width: 35ch;
+    margin-inline: auto;
+  }
+}
+#graphic-design {
+  h2,
+  p {
+    color: $clr-green-300;
+  }
+}
+
+#photography {
+  h2,
+  p {
+    color: $clr-blue;
+  }
+}
+
+/**
+* TESTIMONIALS
+**/
 
 .testimonials {
   padding: 4rem 1.5rem;
@@ -385,6 +394,10 @@ body {
   }
 }
 
+/**
+* GALLERY
+**/
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -398,6 +411,10 @@ body {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+/**
+* FOOTER
+**/
 
 .footer {
   position: relative;
