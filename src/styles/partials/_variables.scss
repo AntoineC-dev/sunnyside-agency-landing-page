@@ -2,9 +2,7 @@
 
 $clr-white: hsla(0, 0%, 98%, 1);
 $clr-red: hsla(7, 99%, 70%, 1);
-$clr-shadow-red: hsla(7, 99%, 70%, 0.5);
 $clr-yellow: hsla(51, 100%, 49%, 1);
-$clr-shadow-yellow: hsla(51, 100%, 49%, 0.5);
 $clr-blue: hsla(198, 62%, 26%, 1);
 $clr-green-100: hsla(167, 44%, 70%, 1);
 $clr-green-200: hsla(168, 34%, 41%, 1);
@@ -39,8 +37,8 @@ $fs-lg: 1.75rem; // 28px
 $fs-xl: 2rem; // 32px
 $fs-2xl: 2.5rem; // 40px
 $fs-3xl: 3.375rem; // 54px
-$fs-clamp-h1: clamp(2.5rem, calc(1.67rem + 3.56vw), 3.38rem);
-$fs-clamp-h2: clamp(2rem, calc(1.25rem + 1.56vw), 2.5rem);
+$fs-clamp-h1: clamp(2.5rem, calc(1.7rem + 2.67vw), 4.5rem);
+$fs-clamp-h2: clamp(2rem, calc(1.16rem + 1.75vw), 3rem);
 
 /** Breakpoints **/
 
