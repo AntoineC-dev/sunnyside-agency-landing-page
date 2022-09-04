@@ -384,3 +384,17 @@ body {
     font-style: normal;
   }
 }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  &__picture,
+  img {
+    width: 100%;
+  }
+
+  @media (min-width: $screen-md) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
