@@ -31,6 +31,13 @@ svg {
   display: block;
   max-width: 100%;
 }
+
+svg {
+  width: inherit;
+  height: inherit;
+  color: inherit;
+}
+
 input,
 button,
 textarea,
