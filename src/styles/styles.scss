@@ -223,7 +223,7 @@ body {
   .feature {
     padding: 4rem 1.5rem;
     width: 100%;
-    max-width: 28rem;
+    max-width: 30rem;
     text-align: center;
     margin-inline: auto;
 
@@ -314,5 +314,73 @@ body {
     p {
       color: $clr-blue;
     }
+  }
+}
+
+.testimonials {
+  padding: 4rem 1.5rem;
+
+  &__title {
+    margin-bottom: 4rem;
+    font-size: $fs-md;
+    letter-spacing: $ls-black;
+    font-weight: $fw-heading-bold;
+    color: $clr-neutral-100;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-block: clamp(4rem, calc(-10.77rem + 23.08vw), 10rem);
+
+    &__title {
+      margin-bottom: clamp(4rem, calc(1.54rem + 3.85vw), 5rem);
+    }
+
+    &__inner {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__avatar {
+    width: 4.5rem;
+    border-radius: 50%;
+  }
+
+  &__quote {
+    max-width: 33ch;
+    margin-block: 2rem;
+    text-align: center;
+    color: $clr-neutral-300;
+
+    @media (min-width: $screen-lg) {
+      margin-block: clamp(2rem, calc(-1.69rem + 5.77vw), 3.5rem);
+    }
+  }
+
+  &__name {
+    margin-bottom: 1rem;
+    font-family: $ff-heading;
+    letter-spacing: $ls-heading;
+    color: $clr-neutral-400;
+  }
+
+  &__cite {
+    color: $clr-neutral-100;
+    font-size: $fs-xs;
+    font-style: normal;
   }
 }

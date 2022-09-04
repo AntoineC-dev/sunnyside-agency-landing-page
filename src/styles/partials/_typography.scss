@@ -16,7 +16,8 @@ h2 {
   color: $clr-neutral-400;
 }
 
-p {
+p,
+blockquote {
   line-height: $lh-loose;
   letter-spacing: $ls-body;
 }
