@@ -1,0 +1,22 @@
+@use "variables" as *;
+
+h1,
+h2 {
+  font-family: $ff-heading;
+  font-weight: $fw-heading-black;
+}
+
+h1 {
+  letter-spacing: $ls-black;
+  color: $clr-white;
+}
+
+h2 {
+  letter-spacing: $ls-heading;
+  color: $clr-neutral-400;
+}
+
+p {
+  line-height: $lh-loose;
+  letter-spacing: $ls-body;
+}
