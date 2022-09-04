@@ -25,7 +25,7 @@
         <!-- Navigation -->
         <nav id="nav" class="navbar__nav" aria-label="Main">
           <!-- Hamburger -->
-          <button id="hamburger" class="navbar__nav-hamburger" aria-expanded="false" aria-controls="main-navigation">
+          <button id="hamburger" class="navbar__nav-hamburger" aria-expanded="false" aria-controls="nav-items">
             <span class="sr-only">Main Navigation</span>
             <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 18">
               <path d="M24 16v2H0v-2h24zm0-8v2H0V8h24zm0-8v2H0V0h24z" fill="currentColor" fill-rule="evenodd" />
@@ -57,7 +57,11 @@
       </div>
       <picture>
         <source media="(max-width: 649px)" srcset="./src/assets/mobile/image-header.jpg" />
-        <img class="header__image" srcset="./src/assets/desktop/image-header.jpg" alt="An orange sliced in half" />
+        <img
+          class="header__image"
+          src="./src/assets/desktop/image-header.jpg"
+          srcset="./src/assets/desktop/image-header.jpg"
+          alt="An orange sliced in half" />
       </picture>
     </header>
     <main>
@@ -95,6 +99,7 @@
             <source media="(max-width: 560px)" srcset="./src/assets/mobile/image-graphic-design.jpg" />
             <img
               src="./src/assets/desktop/image-graphic-design.jpg"
+              srcset="./src/assets/desktop/image-graphic-design.jpg"
               alt="Two really fresh cherries with water dripping" />
           </picture>
           <div class="feature-special__inner">
@@ -108,7 +113,10 @@
         <section id="photography" class="feature-special">
           <picture class="feature-special__picture">
             <source media="(max-width: 560px)" srcset="./src/assets/mobile/image-photography.jpg" />
-            <img src="./src/assets/desktop/image-photography.jpg" alt="An orange on a blue background" />
+            <img
+              src="./src/assets/desktop/image-photography.jpg"
+              srcset="./src/assets/desktop/image-photography.jpg"
+              alt="An orange on a blue background" />
           </picture>
           <div class="feature-special__inner">
             <h2 class="feature-special__title">Photography</h2>
@@ -122,7 +130,7 @@
       <section class="testimonials">
         <h2 class="testimonials__title">Client Testimonials</h2>
         <div class="testimonials__inner">
-          <article class="testimonial">
+          <div class="testimonial">
             <img class="testimonial__avatar" src="./src/assets/image-emily.jpg" alt="Avatar picture of Emily" />
             <blockquote class="testimonial__quote">
               We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always
@@ -130,8 +138,8 @@
             </blockquote>
             <span class="testimonial__name">Emily R.</span>
             <cite class="testimonial__cite">Marketing Director</cite>
-          </article>
-          <article class="testimonial">
+          </div>
+          <div class="testimonial">
             <img class="testimonial__avatar" src="./src/assets/image-thomas.jpg" alt="Avatar picture of Thomas" />
             <blockquote class="testimonial__quote">
               Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and
@@ -139,35 +147,45 @@
             </blockquote>
             <span class="testimonial__name">Thomas S.</span>
             <cite class="testimonial__cite">Chief Operating Officer</cite>
-          </article>
-          <article class="testimonial">
+          </div>
+          <div class="testimonial">
             <img class="testimonial__avatar" src="./src/assets/image-jennie.jpg" alt="Avatar picture of Jennie" />
             <blockquote class="testimonial__quote">
               Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
             </blockquote>
             <span class="testimonial__name">Jennie F.</span>
             <cite class="testimonial__cite">Business Owner</cite>
-          </article>
+          </div>
         </div>
       </section>
       <section class="gallery">
         <h2 class="sr-only">Gallery</h2>
         <picture class="gallery__picture">
           <source media="(max-width: 767px)" srcset="./src/assets/mobile/image-gallery-milkbottles.jpg" />
-          <img src="./src/assets/desktop/image-gallery-milkbottles.jpg" alt="Milk Bottles in front of some clouds" />
+          <img
+            src="./src/assets/desktop/image-gallery-milkbottles.jpg"
+            srcset="./src/assets/desktop/image-gallery-milkbottles.jpg"
+            alt="Milk Bottles in front of some clouds" />
         </picture>
         <picture class="gallery__picture">
           <source media="(max-width: 767px)" srcset="./src/assets/mobile/image-gallery-orange.jpg" />
-          <img src="./src/assets/desktop/image-gallery-orange.jpg" alt="An orange in a plate on a orange background" />
+          <img
+            src="./src/assets/desktop/image-gallery-orange.jpg"
+            srcset="./src/assets/desktop/image-gallery-orange.jpg"
+            alt="An orange in a plate on a orange background" />
         </picture>
         <picture class="gallery__picture">
           <source media="(max-width: 767px)" srcset="./src/assets/mobile/image-gallery-cone.jpg" />
-          <img src="./src/assets/desktop/image-gallery-cone.jpg" alt="An empty ice cream cone on a blue background" />
+          <img
+            src="./src/assets/desktop/image-gallery-cone.jpg"
+            srcset="./src/assets/desktop/image-gallery-cone.jpg"
+            alt="An empty ice cream cone on a blue background" />
         </picture>
         <picture class="gallery__picture">
           <source media="(max-width: 767px)" srcset="./src/assets/mobile/image-gallery-sugarcubes.jpg" />
           <img
             src="./src/assets/desktop/image-gallery-sugarcubes.jpg"
+            srcset="./src/assets/desktop/image-gallery-sugarcubes.jpg"
             alt="A tower of sugar cubes on a pink background" />
         </picture>
       </section>
