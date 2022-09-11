@@ -1,7 +1,7 @@
-@use "partials/reset";
-@use "partials/typography";
-@use "partials/utilities";
-@use "partials/variables" as *;
+@use 'partials/reset';
+@use 'partials/typography';
+@use 'partials/utilities';
+@use 'partials/variables' as *;
 
 body {
   background-color: $clr-white;
@@ -85,7 +85,7 @@ body {
         visibility: visible;
       }
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         bottom: 100%;
         right: 0;
@@ -119,7 +119,7 @@ body {
             color: $clr-white;
             font-size: $fs-base;
             &::after {
-              content: "";
+              content: '';
               position: absolute;
               left: 0;
               top: calc(100% + 0.125rem);
@@ -259,7 +259,7 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     &::after {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       z-index: -1;
@@ -288,6 +288,11 @@ body {
   &__picture,
   img {
     width: 100%;
+
+    @media (min-width: $screen-md) {
+      min-height: 32rem;
+      object-fit: cover;
+    }
   }
 
   &__inner {
